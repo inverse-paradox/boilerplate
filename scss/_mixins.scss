@@ -47,3 +47,31 @@
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$color1css}', endColorstr='#{$color2css}', GradientType=0);
     }
 }
+
+@mixin transition($prop, $time, $ease: ease) {
+   -webkit-transition: $prop $time $ease;
+	-moz-transition: $prop $time $ease;
+  	-o-transition: $prop $time $ease;
+  	 transition: $prop $time $ease;
+} /*ex: @include transition(color, 0.1s); */
+
+@mixin bp($point) {
+  @if $point == XL {
+    @media (min-width: 1600px) { @content; }
+  }
+  @else if $point == L {
+    @media (max-width: 1175px) { @content; }
+  }
+  @else if $point == M {
+    @media (max-width: 990px)  { @content; }
+  }
+  @else if $point == S {
+    @media (max-width: 810px)  { @content; }
+  }
+  @else if $point == XS {
+    @media (max-width: 575px)  { @content; }
+  }
+  @else if $point == XXS {
+    @media (max-width: 420px)  { @content; }
+  }
+}
