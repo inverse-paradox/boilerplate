@@ -2,15 +2,24 @@
    FONT VARIABLES
 =========================================================== */
 
+/* Personally I like to keep these short, since I like to use them in the css font shorthand 
+(e.g. font: 12px/22px $normal)
+
 $default-font-family: Arial, Helvetica, sans-serif;
 $default-font-size: 12px;
 $default-font-color: #000;
+*/
+
+$custom: 'open', sans-serif;
+$cond: 'OpenSansCondensedBold', sans-serif;
+$light: 'OpenSansCondensedLight', sans-serif;
+$normal: Arial, Helvetica, sans-serif;
 
 /* ===========================================================
    FONT FACE
 =========================================================== */
 
-@font-face {
+/*@font-face {
     font-family: 'Test';
     src: url('../fonts/testfont.eot');
     src: url('../fonts/testfont.eot?#iefix') format('embedded-opentype'),
@@ -19,4 +28,4 @@ $default-font-color: #000;
          url('../fonts/testfont.svg#testfont') format('svg');
     font-weight: normal;
     font-style: normal;
-}
+}*/
